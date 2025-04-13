@@ -101,45 +101,7 @@
         </div>
     </div>
 
-    <script>
-        const container = document.getElementById('block');
-        const baseWidth = 1400; // Базовая ширина (под которую верстали)
-
-        function updateScale() {
-        const windowWidth = window.innerWidth;
-        const minScale = 0.3; // Чтобы блок не исчезал
-        const maxScale = 1.5;   // Чтобы не увеличивался больше исходного
-        const scale = Math.max(minScale, Math.min(maxScale, windowWidth / baseWidth)); // Не увеличиваем больше 100%
-        
-        container.style.transform = `scale(${scale})`;
-        }
-
-        // Запускаем при загрузке и ресайзе
-        window.addEventListener('load', updateScale);
-        window.addEventListener('resize', updateScale);
-        
-        
-
-        const containerMobile = document.getElementById('blockMobile');
-        const baseWidthMobile = 763; // Базовая ширина (под которую верстали)
-
-        function updateScaleMobile() {
-        const windowWidth = window.innerWidth;
-        const minScale = 0.3; // Чтобы блок не исчезал
-        const maxScale = 1;   // Чтобы не увеличивался больше исходного
-        const scale = Math.max(minScale, Math.min(maxScale, windowWidth / baseWidthMobile)); // Не увеличиваем больше 100%
-        
-        containerMobile.style.transform = `scale(${scale})`;
-        }
-
-        // Запускаем при загрузке и ресайзе
-        window.addEventListener('load', updateScaleMobile);
-        window.addEventListener('resize', updateScaleMobile);
-
-
-    </script>
-
-
+    <script src="script.js"></script>
 
 </body>
 </html>
