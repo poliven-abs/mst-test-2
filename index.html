@@ -12,7 +12,6 @@
 <body>
     <div class="block" id="block">
         <div class="content-block center">
-
             <div class="content-line">
                 <div class="content-text">We're here&nbsp;</div>
                 <div class="content-border">
@@ -40,8 +39,7 @@
                 <div class="content-border">
                     <div class="content-text__invisible"></div>
                 </div>
-            </div>
-            
+            </div>            
             <div class="content-invisible">
                 <video autoplay muted loop id="video">
                     <source src="content/video.mp4" type="video/mp4">
@@ -50,74 +48,62 @@
         </div>
     </div>
 
-
-    <div class="content center">
-
-<!-- 
-                <div class="content-block__mobile">
-
-            <div class="content-block">
-
-                <div class="content-line">
-                    <div class="content-text">We're here&nbsp;</div>
-                    <div class="content-border">
-                        <div class="content-text__invisible"></div>
-                    </div>
-                </div>
-
-                <div class="content-line">
-                    <div class="content-text">to&nbsp;</div>
-                    <div class="content-border">
-                        <div class="content-text__invisible"></div>
-                    </div>
-                    <div class="content-text">&nbsp;make</div>
-                </div>
-
-                <div class="content-line">
-                    <div class="content-border">
-                        <div class="content-text__invisible"></div>
-                    </div>
-                    <div class="content-text">&nbsp;healthy living</div>
-                </div>
-
-                <div class="content-line">
-                    <div class="content-text">effortless, so you</div>
-                </div>
-
-                <div class="content-line">
-                    <div class="content-text">can&nbsp;</div>
-                    <div class="content-border">
-                        <div class="content-text__invisible"></div>
-                    </div>
-                    <div class="content-text">&nbsp;live longer</div>
-                </div>
-
-                <div class="content-line">
-                    <div class="content-text">and happier&nbsp;</div>
-                    <div class="content-border">
-                        <div class="content-text__invisible"></div>
-                    </div>
-                </div>
-
-                
-                <div class="content-invisible">
-                    <video autoplay muted loop id="video">
-                        <source src="content/video.mp4" type="video/mp4">
-                    </video> 
+    <div class="block-mobile center" id="blockMobile">
+        <div class="content-block__mobile ">
+            <div class="content-line__mobile">
+                <div class="content-text__mobile">We're here&nbsp;</div>
+                <div class="content-border__mobile">
+                    <div class="content-text__invisible-mob"></div>
                 </div>
             </div>
-        </div>
-        
--->
 
+            <div class="content-line__mobile">
+                <div class="content-text__mobile">to&nbsp;</div>
+                <div class="content-border__mobile">
+                    <div class="content-text__invisible-mob"></div>
+                </div>
+                <div class="content-text__mobile">&nbsp;make</div>
+            </div>
+
+            <div class="content-line__mobile">
+                <div class="content-border__mobile">
+                    <div class="content-text__invisible-mob"></div>
+                </div>
+                <div class="content-text__mobile">&nbsp;healthy living</div>
+            </div>
+
+            <div class="content-line__mobile content-line__mobile_1">
+                <div class="content-text__mobile " >effortless,</div>
+                <div class="content-text__mobile " >&nbsp;so you</div>
+
+            </div>
+
+            <div class="content-line__mobile">
+                <div class="content-text__mobile">can&nbsp;</div>
+                <div class="content-border__mobile">
+                    <div class="content-text__invisible-mob"></div>
+                </div>
+                <div class="content-text__mobile">&nbsp;live longer</div>
+            </div>
+
+            <div class="content-line__mobile">
+                <div class="content-text__mobile">and happier&nbsp;</div>
+                <div class="content-border__mobile">
+                    <div class="content-text__invisible-mob"></div>
+                </div>
+            </div>
+
+            <div class="content-invisible__mobile">
+                <video autoplay muted loop id="video">
+                    <source src="content/video.mp4" type="video/mp4">
+                </video> 
+            </div>
+        </div>
     </div>
 
     <script>
         const container = document.getElementById('block');
         const baseWidth = 1400; // Базовая ширина (под которую верстали)
-
-
-        
 
         function updateScale() {
         const windowWidth = window.innerWidth;
@@ -131,6 +117,26 @@
         // Запускаем при загрузке и ресайзе
         window.addEventListener('load', updateScale);
         window.addEventListener('resize', updateScale);
+        
+        
+
+        const containerMobile = document.getElementById('blockMobile');
+        const baseWidthMobile = 763; // Базовая ширина (под которую верстали)
+
+        function updateScaleMobile() {
+        const windowWidth = window.innerWidth;
+        const minScale = 0.3; // Чтобы блок не исчезал
+        const maxScale = 1;   // Чтобы не увеличивался больше исходного
+        const scale = Math.max(minScale, Math.min(maxScale, windowWidth / baseWidthMobile)); // Не увеличиваем больше 100%
+        
+        containerMobile.style.transform = `scale(${scale})`;
+        }
+
+        // Запускаем при загрузке и ресайзе
+        window.addEventListener('load', updateScaleMobile);
+        window.addEventListener('resize', updateScaleMobile);
+
+
     </script>
 
 
