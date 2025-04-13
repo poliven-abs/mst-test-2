@@ -44,10 +44,8 @@
         flex-wrap: nowrap;
         &__mobile {
             max-width: 760px;
-            width: 100%;
+            width: 98%;
             box-sizing: border-box; 
-            padding-left: 10px;
-            padding-right: 10px;   
             position: absolute;
             z-index: 3;
             padding-left: 0;
@@ -65,11 +63,13 @@
         justify-content: space-between;
         align-items: stretch;
         height: 154px;
+        margin: -1px;
         &__mobile {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: stretch;
+            margin: 0;
             &_1 {
                 background-color: #000000;
             }
@@ -83,6 +83,7 @@
         display: inline-block;
         border: 1px solid black;
         box-sizing: border-box;
+        margin: -1px;
         &__invisible {
             height: 100%;
             min-width: 100px;
@@ -95,9 +96,10 @@
                 display: block;
                 min-height: 80px;
             }
-            &-mob {
+            &-mob {            
                 min-width: 50px;
                 height: 50px;
+                margin: -1px;
             }
         }
         &__mobile {
@@ -118,6 +120,7 @@
         box-sizing: border-box;
         display: inline-block;
         padding: 28px 0 28px 0;
+        margin: -1px;
         &__mobile {
             flex: 1;
             border: 10px solid black;
@@ -126,6 +129,7 @@
             padding: 10px 0 10px 0;
             border-bottom-width: 25px;
             border-top-width: 25px;
+            margin: -1px;
         }
     }
     &-invisible {
@@ -135,13 +139,17 @@
         height: 95%;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
         &__mobile {
             position: absolute;
             z-index: -10;
-            width: 100%;
+            width: 98%;
             height: 95%;
             display: flex;
             justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
     }
   }
@@ -149,9 +157,7 @@
   #video {
     flex: 1;
     width: 100%;
-    max-height: 100%;
-    top: 0;
-    left: 0;
+    max-height: 100%;  
     z-index: -1;
     object-fit: cover;
   }
