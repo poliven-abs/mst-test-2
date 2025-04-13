@@ -1,0 +1,119 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.block {
+  transform-origin: top center;
+  transition: transform 0s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: nowrap;
+  width: 1400px;
+}
+
+.content-block {
+  position: absolute;
+  max-width: 1920px;
+  padding-left: 20px;
+  padding-right: 20px;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.content-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 154px;
+}
+.content-text {
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 140%;
+  background-color: #000000;
+  display: inline-block;
+  border: 10px solid black;
+  box-sizing: border-box;
+}
+.content-text__invisible {
+  height: 100%;
+  min-width: 100px;
+  background-color: lightgrey;
+  border-radius: 4px;
+  flex: 1;
+  opacity: 0;
+}
+.content-text__invisible::after {
+  content: "​";
+  display: block;
+  min-height: 80px;
+}
+.content-border {
+  flex: 1;
+  border: 10px solid black;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 28px 0 28px 0;
+}
+.content-invisible {
+  position: absolute;
+  z-index: -10;
+  width: 95%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+#video {
+  flex: 1;
+  max-width: 100%;
+  max-height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content-block__mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .content-block__mobile {
+    display: block;
+  }
+  .content-text {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */

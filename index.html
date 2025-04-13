@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Video | Test 2</title>
+</head>
+<body>
+    <div class="block" id="block">
+        <div class="content-block center">
+
+            <div class="content-line">
+                <div class="content-text">We're here&nbsp;</div>
+                <div class="content-border">
+                    <div class="content-text__invisible"></div>
+                </div>
+                <div class="content-text">&nbsp;to make</div>
+            </div>
+            <div class="content-line">
+                <div class="content-text">healthy&nbsp;</div>
+                
+                <div class="content-border">
+                    <div class="content-text__invisible"></div>
+                </div>
+                <div class="content-text">&nbsp;living effortless,</div>
+            </div>
+            <div class="content-line">
+                <div class="content-text">so you can&nbsp;</div>
+                <div class="content-border">
+                    <div class="content-text__invisible"></div>
+                </div>
+                <div class="content-text">&nbsp;live longer</div>
+            </div>
+            <div class="content-line">
+                <div class="content-text">and happier&nbsp;</div>
+                <div class="content-border">
+                    <div class="content-text__invisible"></div>
+                </div>
+            </div>
+            
+            <div class="content-invisible">
+                <video autoplay muted loop id="video">
+                    <source src="content/video.mp4" type="video/mp4">
+                </video> 
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content center">
+
+<!-- 
+                <div class="content-block__mobile">
+
+            <div class="content-block">
+
+                <div class="content-line">
+                    <div class="content-text">We're here&nbsp;</div>
+                    <div class="content-border">
+                        <div class="content-text__invisible"></div>
+                    </div>
+                </div>
+
+                <div class="content-line">
+                    <div class="content-text">to&nbsp;</div>
+                    <div class="content-border">
+                        <div class="content-text__invisible"></div>
+                    </div>
+                    <div class="content-text">&nbsp;make</div>
+                </div>
+
+                <div class="content-line">
+                    <div class="content-border">
+                        <div class="content-text__invisible"></div>
+                    </div>
+                    <div class="content-text">&nbsp;healthy living</div>
+                </div>
+
+                <div class="content-line">
+                    <div class="content-text">effortless, so you</div>
+                </div>
+
+                <div class="content-line">
+                    <div class="content-text">can&nbsp;</div>
+                    <div class="content-border">
+                        <div class="content-text__invisible"></div>
+                    </div>
+                    <div class="content-text">&nbsp;live longer</div>
+                </div>
+
+                <div class="content-line">
+                    <div class="content-text">and happier&nbsp;</div>
+                    <div class="content-border">
+                        <div class="content-text__invisible"></div>
+                    </div>
+                </div>
+
+                
+                <div class="content-invisible">
+                    <video autoplay muted loop id="video">
+                        <source src="content/video.mp4" type="video/mp4">
+                    </video> 
+                </div>
+            </div>
+        </div>
+        
+-->
+
+    </div>
+
+    <script>
+        const container = document.getElementById('block');
+        const baseWidth = 1400; // Базовая ширина (под которую верстали)
+
+
+        
+
+        function updateScale() {
+        const windowWidth = window.innerWidth;
+        const minScale = 0.3; // Чтобы блок не исчезал
+        const maxScale = 1.5;   // Чтобы не увеличивался больше исходного
+        const scale = Math.max(minScale, Math.min(maxScale, windowWidth / baseWidth)); // Не увеличиваем больше 100%
+        
+        container.style.transform = `scale(${scale})`;
+        }
+
+        // Запускаем при загрузке и ресайзе
+        window.addEventListener('load', updateScale);
+        window.addEventListener('resize', updateScale);
+    </script>
+
+
+
+</body>
+</html>
