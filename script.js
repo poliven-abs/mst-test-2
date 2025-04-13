@@ -19,12 +19,12 @@ window.addEventListener('resize', updateScale);
 //tablet+mobile
 
 const containerMobile = document.getElementById('blockMobile');
-const baseWidthMobile = 763;
+const baseWidthMobile = 770;
 
 function updateScaleMobile() {
 const windowWidth = window.innerWidth;
 const minScale = 0.3;
-const maxScale = 1;
+const maxScale = 1.2;
 
 const scale = Math.max(minScale, Math.min(maxScale, windowWidth / baseWidthMobile));
 
